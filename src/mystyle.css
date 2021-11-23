@@ -16,6 +16,30 @@
   --deep-black-color: #000000;
 }
 
+/************* ANIMATIONS BEGIN***************/
+/************* KEYFRAMES  ***************/
+.textDescendant{   
+
+    top :  200px;
+    animation : apparition 2.8s ease-out;
+}
+
+@keyframes apparition{
+  from {opacity : 0; transform : translateY( -200px);}
+  to {opacity : 1; transform : translateY( 0px);}
+}
+
+/************* TRANSITION ***************/
+.textTransition{
+  color : red;  
+  font-size : 10px;
+  transition: font-size 2s;
+}
+.textTransition:hover{
+    font-size : 20px;
+}
+/************* ANIMATIONS END***************/
+
 /* SIGNUP - LOGIN - FORGETPASSWORD */
 .signUpLoginBox {
   background-image: url(images/bg-noise-texture.png);

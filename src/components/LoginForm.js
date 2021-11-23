@@ -38,6 +38,9 @@ const LoginForm = (props) => {
     }
 
     return (
+        <div>
+            <h5 class="textDescendant">TEXT QUI DESCEND </h5>
+            <h5 class="textTransition">TRANSITION</h5>
         <div className="signUpLoginBox">
             <div className="slContainer">
                 <div className="formBoxLeftLogin">
@@ -73,6 +76,7 @@ const LoginForm = (props) => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
