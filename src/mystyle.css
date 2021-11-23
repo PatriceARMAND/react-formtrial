@@ -1,0 +1,255 @@
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton|Bangers|Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --light-grey-color: #EAE8E8;
+  --light-green-color: #1ecc78;
+  --green-color: #0cb765;
+  --red-color: #EB1D27;
+  --blue-color: #4f78a4;
+  --dark-red-color: #d31017;
+  --dark-grey-color: #363636;
+  --black-color: #333030;
+  --deep-black-color: #000000;
+}
+
+/* SIGNUP - LOGIN - FORGETPASSWORD */
+.signUpLoginBox {
+  background-image: url(images/bg-noise-texture.png);
+  background-repeat: repeat;
+  -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
+  box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
+  display: flex;
+  justify-content: center;
+}
+
+.slContainer {
+  flex: 0 1 80%;
+  display: flex;
+}
+
+.formBoxLeftSignup {
+  min-height: 500px;
+  background-image: url(images/ironman.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 0 1 50%;
+}
+
+.formBoxLeftLogin {
+  min-height: 500px;
+  background-image: url(images/spiderman.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 0 1 50%;
+}
+
+.formBoxLeftForget {
+  min-height: 500px;
+  background-image: url(images/deadpool.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 0 1 50%;
+}
+
+.formBoxRight {
+  flex: 0 1 50%;
+}
+
+.formBoxRight span {
+  display: block;
+  color: var(--red-color);
+  text-align: center;
+  border: 1px solid var(--red-color);
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.formContent {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.formContent h2 {
+  margin: 0 0 40px 0;
+  padding: 0;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+
+.formContent .inputBox {
+  position: relative;
+  height: 80px;
+  /*border : solid 1px green; /* added compared to the original */
+}
+
+
+.formContent .inputBox input {
+  padding: 10px 0; /*fix padding defined for label below*/
+  background: transparent;
+  /*text-transform: uppercase;*/
+   border: none; /*  border : solid 1px black*/
+   border-bottom: 1px solid var(--white-color);
+   /*margin-bottom: 30px;*/ 
+   color: var(--red-color); /* entry is red colored */
+}
+
+.formContent .inputBox label {
+  color: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 17px;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.formContent .inputBox input:focus~label,
+.formContent .inputBox input:valid~label {
+  top: -30px; /* effect : move label above input   */
+  left: 0;
+  color: var(--white-color);
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Form buttons */
+.formContent button {
+  margin-left: 0;
+  display: block;
+  margin: 0 auto 20px;
+  min-width: 150px;
+  background-color: transparent;
+  color: var(--white-color);
+  padding: 7px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.formContent button:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled],
+button:disabled:hover,
+button[disabled]:hover {
+  border: 1px solid var(--light-grey-color);
+  background-color: var(--light-grey-color);
+  color: var(--dark-grey-color);
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.linkContainer {
+  height: 50px;
+  margin-top: 35px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--light-grey-color);
+}
+
+.simpleLink {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.simpleLink:hover {
+  color: var(--red-color);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 540px) {
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .stepsBtnContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    align-items: stretch;
+  }
+
+  .success,
+  .failure,
+  .gameOver {
+    flex-basis: auto;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .welcomePage {
+    background-image: none;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+  }
+
+  .leftBox {
+    display: flex;
+    flex: 0 1 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightBox {
+    display: flex;
+    flex: 0 1 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-welcome {
+    margin-top: 0;
+    flex-basis: 300px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  /* Change Modal elements */
+  .modalBody {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+  }
+
+  .modalContainer {
+    flex: 0 1 90%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+   /* make container full width */
+   .container {
+    flex: 0 1 100%;
+  }
+
+  /* hide all images on forms */
+  .formBoxLeftSignup,
+  .formBoxLeftLogin,
+  .formBoxLeftForget {
+    display: none;
+  }
+
+  .formBoxRight {
+    flex: 0 1 100%;
+  }
+
+}
